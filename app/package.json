@@ -1,0 +1,19 @@
+{
+  "name": "tic-tac-toe",
+  "author": "Kaushik",
+  "private": true,
+  "engines": {
+  	"node": "6.5.0"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest",
+    "node-static": "latest",
+    "path": "latest",
+    "socket.io": "latest"
+  },
+  "description": "Tic Tac Toe"
+}
