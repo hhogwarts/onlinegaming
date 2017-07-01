@@ -10,7 +10,6 @@ var players = {};
 var games = {
 };
 var playersGamesMapping = {
-
 }
 // games = {
 //     'game1': {
@@ -198,28 +197,10 @@ function createNewPlayer(data, gameId, playerName) {
     self.broadcast.emit("total players", {totalPlayers: Object.keys(playersGamesMapping).length});
     console.log('new Player connected: ' + self.id + ', in gameId: ' + gameId + ', isGameOpen: ' + games[gameId].isGameOpen + ', players: ' + Object.keys(games[gameId].players).length);
 };
-
 function onLobbyMessage(data){
     sendLobbyMessage(this, data.message);
-}
-
+};
 function sendLobbyMessage(socket, message){
     socket.emit("lobby message", {message: message});
     socket.broadcast.emit("lobby message", {message: message});
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
